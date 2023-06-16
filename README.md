@@ -1,5 +1,3 @@
-
-
 # Candidature Ellipse Bike
 
 Candidature pour un stage en tant que Développeur Full-Stack chez Ellipse Bike.
@@ -34,4 +32,4 @@ De mon côté, j'ai utilisé Python à de nombreuses reprises afin d'automatiser
 
 J'ai beaucoup travaillé avec Wordpress ces dernières années, que ce soit en utilisant des plugins tels que Elementor, WooCommerce ou Yoast SEO pour des sites e-commerce, en développant mes propres thèmes ou dernièrement en l'utilisant en tant que Headless CMS.
 
-Cependant, je n'ai jamais eu l'occasion de travailler avec Odoo.
+Cependant, je n'ai jamais eu l'occasion de travailler avec Odoo.## Partie Pratique

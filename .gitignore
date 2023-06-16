@@ -1,0 +1,4 @@
+.vscode/
+exo1_python/__pycache__/
+exo1_python/config.py
+.DS_Store

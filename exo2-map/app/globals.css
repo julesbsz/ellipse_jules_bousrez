@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+}
+
+.positionbar {
+	background-color: rgba(35, 55, 75, 0.9);
+	color: #fff;
+	padding: 6px 12px;
+	font-family: monospace;
+	z-index: 1;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	margin: 12px;
+	border-radius: 4px;
+}
+
+.informations {
+	background-color: rgba(35, 55, 75, 0.9);
+	color: #fff;
+	padding: 6px 12px;
+	font-family: monospace;
+	z-index: 1;
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	margin: 12px;
+	border-radius: 4px;
+}

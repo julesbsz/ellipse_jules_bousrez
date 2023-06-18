@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Pour ce projet, j’ai choisi d’utiliser React et [Next.js](https://nextjs.org/), des technologies que j’apprécie particulièrement. Pour la carte géographique, je me suis servie de [Mapbox](https://www.mapbox.com/) qui met à disposition une API gratuite avec une documentation très complète.
 
-## Getting Started
+Lien de l’application (hébergé avec [Vercel](https://vercel.com/)) : [https://ellipse-jules-bousrez.vercel.app/](https://ellipse-jules-bousrez.vercel.app/)
 
-First, run the development server:
+## Informations
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Le code source est constitué de 5 fichiers principaux :
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   [data.ts](https://github.com/julesbsz/ellipse_jules_bousrez/blob/master/exo2-map/api/data.ts) : Ce fichier contient une fonction qui récupère et trie les données auprès de l’API JCDecaux.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   [page.tsx](https://github.com/julesbsz/ellipse_jules_bousrez/blob/master/exo2-map/app/page.tsx) : Ce fichier permet d’injecter sur la page web l’unique composant parent, la carte géographique.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+-   [Map.tsx](https://github.com/julesbsz/ellipse_jules_bousrez/blob/master/exo2-map/components/Map.tsx) : Ce fichier contient le composant principal; la carte. On y instancie une carte avec les données de l’API.
 
-## Learn More
+-   [Position.tsx](https://github.com/julesbsz/ellipse_jules_bousrez/blob/master/exo2-map/components/Position.tsx) : Ce composant permet d’afficher notre position sur la map et notre zoom en temps réel.
 
-To learn more about Next.js, take a look at the following resources:
+-   [Informations.tsx](https://github.com/julesbsz/ellipse_jules_bousrez/blob/master/exo2-map/components/Informations.tsx) : Ce composant permet d’afficher les informations d’une station en particulier lorsqu’on clique sur son marqueur.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+La données présentes sur la map sont mise à jour toutes les minutes. Plus d’informations sont détaillées dans les commentaires présents dans le code.

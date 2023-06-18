@@ -3,10 +3,12 @@ async function getStations() {
 	const response = await fetch(`https://api.jcdecaux.com/vls/v1/stations?apiKey=${process.env.NEXT_PUBLIC_JCDECAUX_API_KEY}`);
 	const data = await response.json();
 
+	// Si la requête n'a pas abouti, on lève une erreur
 	if (!response.ok) {
-		return null;
+		throw new Error("Erreur lors du chargement des données ->", data.message);
 	}
 
+	// On formate les données pour ne garder que celles qui nous intéressent
 	const stations = data.map((station: any) => {
 		return {
 			id: station.number,
@@ -20,6 +22,7 @@ async function getStations() {
 			empty_stands: station.available_bike_stands,
 			address: station.address,
 			city: station.contract_name,
+			last_update: station.last_update,
 		};
 	});
 
